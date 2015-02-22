@@ -69,7 +69,7 @@ $locs = array( 'tête', 'ceinture', 'torse', 'cou', 'oreilles', 'anneau', 'cape'
 // ETAPE 1 : "l'entrepot"
 if (isset($_POST['matos']) and !empty($_POST['matos'])) {
 	$raw = trim(stripslashes($_POST['matos']));
-	$raw = preg_replace("(\r\nsac)","sacxxx",$raw); //Dergonic : Pattern introuvable sur la page Entrepot
+	$raw = preg_replace("(\r\nsac)","sacxxx",$raw); //Dergonic : Pattern "(\r\nsac)" introuvable sur la page Entrepot, mais ca fonctionne :D
 
 	$pos = strpos($raw,'Objets pris'); //On saute le contenu de l'entrepot pour passer directement au stuff
 	$pos1 = strpos($raw,'sacxxx');	
